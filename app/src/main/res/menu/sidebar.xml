@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sidebar">
     <item android:title="@string/pts" />
     <item android:title="@string/wdraw" />
     <item android:title="@string/cred" />
     <item android:title="@string/totalpts" />
     <item android:title="@string/prevres" />
+
 </menu>

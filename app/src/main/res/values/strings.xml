@@ -16,4 +16,6 @@
     <string name="wdraw">Withdraw</string>
     <string name="totalpts">Total Points</string>
     <string name="prevres">Previous Results</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>
