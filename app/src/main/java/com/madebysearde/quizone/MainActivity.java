@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        sport = (TextView)findViewById(R.id.sport_text);
+
         mDrawer = (DrawerLayout)findViewById(R.id.activity_main);
         mToggle = new ActionBarDrawerToggle(this, mDrawer,R.string.open,R.string.close);
         mDrawer.addDrawerListener(mToggle);
@@ -25,11 +27,12 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        //reverseTimer(2000,sport);
+        reverseTimer(2000,sport);
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         if(mToggle.onOptionsItemSelected(item)){
+
             return true;
         }
         return super.onOptionsItemSelected(item);

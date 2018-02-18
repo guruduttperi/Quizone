@@ -35,7 +35,7 @@
             android:layout_width="0dp"
             android:layout_height="240sp"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/flowers" />
+            app:srcCompat="@drawable/way" />
 
         <ImageView
             android:id="@+id/sportsImage"
@@ -46,7 +46,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/headerImage"
-            app:srcCompat="@drawable/night" />
+            app:srcCompat="@drawable/nightxs" />
 
         <ImageView
             android:id="@+id/triviaImage"
@@ -56,7 +56,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/sportsImage"
-            app:srcCompat="@drawable/tech" />
+            app:srcCompat="@drawable/techxs" />
 
         <ImageButton
             android:id="@+id/imageButton"
@@ -109,7 +109,7 @@
             app:layout_constraintTop_toTopOf="@+id/imageButton2" />
 
         <ImageView
-            android:id="@+id/imageView9"
+            android:id="@+id/sport"
             android:layout_width="120sp"
             android:layout_height="30sp"
             android:layout_marginTop="8dp"
@@ -130,10 +130,10 @@
             android:text="TextView"
             android:textAppearance="@style/TextAppearance.AppCompat.Notification.Time"
             android:textColor="@android:color/black"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+            app:layout_constraintBottom_toBottomOf="@+id/sport"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView9" />
+            app:layout_constraintTop_toTopOf="@+id/sport" />
 
     </android.support.constraint.ConstraintLayout>
 
