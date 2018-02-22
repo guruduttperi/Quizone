@@ -7,5 +7,6 @@
     <item android:title="@string/cred" />
     <item android:title="@string/totalpts" />
     <item android:title="@string/prevres" />
+    <item android:title="@string/about_us"/>
 
 </menu>

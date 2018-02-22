@@ -1,5 +1,6 @@
 package com.madebysearde.quizone;
 
+import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -12,15 +13,16 @@ public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawer;
     private ActionBarDrawerToggle mToggle;
-    TextView sport;
+    TextView sport, trivia;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         sport = (TextView)findViewById(R.id.sport_text);
+        trivia = (TextView)findViewById(R.id.trivia_text);
 
-        mDrawer = (DrawerLayout)findViewById(R.id.activity_main);
+        mDrawer = (DrawerLayout)findViewById(R.id.drawer);
         mToggle = new ActionBarDrawerToggle(this, mDrawer,R.string.open,R.string.close);
         mDrawer.addDrawerListener(mToggle);
         mToggle.syncState();
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         reverseTimer(2000,sport);
+        reverseTimer(3000,trivia);
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
@@ -35,9 +38,14 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
 
+    public void funcAbout(){
+        Intent intent = new Intent(this,AboutActivity.class);
+        this.startActivity(intent);
+    }
 
     public void reverseTimer(int Seconds, final TextView tv) {
 
@@ -51,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 int minutes = tempMint / 60;
                 seconds = tempMint - (minutes * 60);
 
-                tv.setText("TIME : " + String.format("%02d", hours)
+                tv.setText("" + String.format("%02d", hours)
                         + ":" + String.format("%02d", minutes)
                         + ":" + String.format("%02d", seconds));
             }
